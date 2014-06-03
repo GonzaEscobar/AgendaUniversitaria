@@ -1,0 +1,112 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family: verdana;
+}
+
+header{
+	margin:90px auto;
+	width:1200px;
+	height:230px;
+	
+}
+
+img.logo{
+	display:block;
+	margin: 50px auto;
+	padding: 10px;
+	background-color: rgba(255,255,255,0.15);
+	border-radius:50%;
+	width:600px auto;
+}
+
+img.botonSalir{
+	display:block;
+	padding: 10px;
+	background-color: rgba(255,255,255,0.15);
+	border-radius:50%;
+	margin:0%;
+}
+
+h5{
+font-family: arial black;
+text-align: right;
+font-size:20px;
+color:white;
+text-decoration:none;
+}
+
+h6{
+font-family: verdana;
+font-size:55px;
+color:rgb(128,0,255);
+text-align: left;
+}
+
+div.contenedor{
+	width:150px;
+	height:180px;
+	float: left;
+	-webkit-transition: height 0.2s;
+	border-radius: 10%;
+}
+
+div#btnAgregarDocumento{
+	background-color:rgb(119,173,196);
+}
+div#btnDescargarDocumento{
+	background-color: rgb(99,155,179);
+}
+div#btnAgregarMaterias{
+	background-color: rgb(22,145,190);
+}
+div#btnQuitarMateria{
+	background-color: rgb(22,107,162);
+}
+div#btnVerMaterias{
+	background-color: rgb(0,4,255);
+}
+div#btnAgregarEvento{
+	background-color: rgb(128,0,255);
+}
+div#btnVerEventos{
+	background-color: rgb(64,0,255);
+}
+div#btnQuitarEventos{
+	background-color: rgb(21,40,54);
+}
+
+img.icon{
+	display: block;
+	margin: 40px auto;
+	background-color: rgba(255,255,255,0.15);
+	width: 40px;
+	padding: 20px;
+	-webkit-border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
+	-webkit-transition: box-shadow 0.6s;
+}
+
+p.texto{
+	margin-top: -10px;
+	font-size: .9em;
+	color: white;
+	text-align: center;
+	padding-top: 0.2px;
+	opacity: .6;
+	-webkit-transition: padding-top 0.2s;
+	font-family: arial;
+}
+
+div.contenedor:hover{
+	height:200px;
+}
+
+div.contenedor:hover p.texto{
+	padding-top: 20px;
+	opacity: 1;
+}
+
+div.contenedor:hover img.icon{
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.6);
+}
