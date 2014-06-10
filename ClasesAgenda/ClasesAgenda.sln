@@ -1,7 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Web Developer Express 2010
-'esto es un cmbo
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ClasesAgenda", "ClasesAgenda\ClasesAgenda.vbproj", "{AF5EBAF4-2517-4ABE-B570-149382AB9537}"
 EndProject
 Global

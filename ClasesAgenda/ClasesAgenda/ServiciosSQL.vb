@@ -2,7 +2,7 @@
 
 Public Class ServiciosSQL
 
-    'Private Const mStringConexion As String = "driver={SQL Server};server=keyfactor.no-ip.org;uid=sa;PWD=matanga;database=AgendaUniversitaria;Provider=SQLOLEDB"
+    Private Const mStringConexion As String = "driver={SQL Server};server=keyfactor.no-ip.org;uid=sa;PWD=matanga;database=AgendaUniversitaria;Provider=SQLOLEDB"
     'Private Const mStringConexion As String = "driver={SQL Server};server=EugePC;Trusted_Connection=Yes;database=AgendaUniversitaria;Provider=SQLOLEDB"
 
     Private Sub New()
@@ -10,14 +10,16 @@ Public Class ServiciosSQL
     End Sub
 
     Private Shared Function obtenerStringConexion() As String
-        Dim mStringConexion As String = ""
+        'Dim mStringConexion As String = ""
 
-        Dim mArchivoConfiguracion As New System.IO.StreamReader("C:\Dropbox\Public\LP4\Proyecto\StringConexion\strConexion.cnf")
+        'Dim mArchivoConfiguracion As New System.IO.StreamReader("C:\Dropbox\Public\LP4\Proyecto\StringConexion\strConexion.cnf")
 
-        mStringConexion = mArchivoConfiguracion.ReadLine
-        mArchivoConfiguracion.Close()
+        'mStringConexion = mArchivoConfiguracion.ReadLine
+        'mArchivoConfiguracion.Close()
 
-        Return ServiciosEncriptacion.DesEncriptar(mStringConexion)
+        'Return ServiciosEncriptacion.DesEncriptar(mStringConexion)
+
+        Return mStringConexion
 
     End Function
 

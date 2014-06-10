@@ -5,32 +5,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <link rel="StyleSheet" href="Styles/agregarDocumento_style.css" type="text/css">
     <style type="text/css">
         .style2
         {
             color: #FFFFFF;
         }
+        .style3
+        {
+            color: #0080FF;
+            font-family: Aharoni;
+        }
+        .style4
+        {
+            font-size: 30px;
+        }
     </style>
 </head>
 <body background=  "fondoAzul.jpg">
     <form id="form1" runat="server">
-    <div style="height: 302px">
-    
+    <asp:LinkButton ID="Salir" runat="server"  ><h5></h5><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
+    <div class="caja">
+        <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <div class="style2">
     
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
-                class="style2">&nbsp; Descargar Documentos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
-        <asp:Label ID="lblLogueado" runat="server" ForeColor="White"></asp:Label>
+            &nbsp;<span 
+                <h2 style="text-align: center"><span 
+                style="font-family: Aharoni; color: #003399; text-align: left;" 
+                class="style4">DESCARGAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DOCUMENTOS</span></h2>
+              
+        
 &nbsp;
-        <asp:LinkButton ID="Salir" runat="server" ForeColor="White">Salir</asp:LinkButton>
         <br />
         <br />
-&nbsp;<span class="style2">&nbsp;&nbsp; Materias&nbsp;</span>
+&nbsp;<span class="style2">&nbsp;&nbsp;</span><span class="style3"><strong>Materias&nbsp;</strong></span>
         <asp:DropDownList ID="materias" runat="server" Height="20px" Width="212px">
             <asp:ListItem></asp:ListItem>
         </asp:DropDownList>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;<asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
         <br />
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -64,13 +77,7 @@
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    
+            
     </div>
     </form>
 </body>
