@@ -267,6 +267,7 @@
                 For Each unaFila As DataRow In dt.Rows
 
                     mEvento = New Evento
+                    mEvento.Codigo = unaFila("idevento")
                     mEvento.Nombre = unaFila("descripevento").ToString.Trim
                     mEvento.Fecha = unaFila("fechaevento").ToString.Trim
                     mEvento.Materia = unaFila("idmateria")
@@ -506,6 +507,15 @@
 
         mSQL = "DELETE FROM materiasusuarios  " & _
                 "WHERE idusuario = '" & pUsuario & "' AND idmateria ='" & pMateria & "'"
+        ServiciosSQL.ejecutarSQL(mSQL)
+
+    End Sub
+
+    Public Sub quitarEvento(ByVal pEvento As Integer)
+        Dim mSQL As String
+
+        mSQL = "DELETE FROM eventos  " & _
+                "WHERE idevento = '" & pEvento & "'"
         ServiciosSQL.ejecutarSQL(mSQL)
 
     End Sub

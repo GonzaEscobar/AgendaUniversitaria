@@ -1,11 +1,11 @@
 ﻿Public Class Evento
 
-    Private mCodigo As String
-    Public Property Codigo() As String
+    Private mCodigo As Integer
+    Public Property Codigo() As Integer
         Get
             Return mCodigo
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             mCodigo = value
         End Set
     End Property

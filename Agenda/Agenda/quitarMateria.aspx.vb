@@ -3,10 +3,10 @@
 Public Class quitarMateria
     Inherits System.Web.UI.Page
     Dim wsAgenda As New ServicioAgendaUniversitaria
+    Dim materiasCarrera As New List(Of Materia)
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        Dim materiasCarrera As New List(Of Materia)
         materias.Items.Clear()
         Response.Cache.SetCacheability(HttpCacheability.ServerAndNoCache)
         Response.Cache.SetAllowResponseInBrowserHistory(False)
@@ -26,6 +26,7 @@ Public Class quitarMateria
 
     Protected Sub btnQuitar_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnQuitar.Click
 
+
     End Sub
 
     Private Sub quitarMateria_PreLoad(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreLoad
@@ -39,7 +40,7 @@ Public Class quitarMateria
                     idMateria = wsAgenda.obtenerIdMateria(materia.Text)
                     wsAgenda.quitarMateriaAUsuario(idUsuario, idMateria)
                 End If
-            Next
+            Next 
         End If
 
     End Sub
