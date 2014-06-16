@@ -63,7 +63,7 @@ Materias&nbsp;</strong></span>
         </div>
         <asp:GridView ID="grdDocumentos" runat="server" CellPadding="4" 
             ForeColor="#333333" GridLines="None" style="margin-left: 0px" 
-            Width="458px" HorizontalAlign="Justify">
+            Width="458px" HorizontalAlign="Center">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField SelectText="Descargar" ShowSelectButton="True" />
