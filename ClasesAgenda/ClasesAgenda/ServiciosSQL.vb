@@ -10,14 +10,12 @@ Public Class ServiciosSQL
     End Sub
 
     Private Shared Function obtenerStringConexion() As String
+
         Dim mStringConexion As String = ""
 
-        Dim mArchivoConfiguracion As New System.IO.StreamReader("C:\Dropbox\Public\LP4\Proyecto\StringConexion\strConexion.cnf")
+        mStringConexion = "driver={SQL Server};server=keyfactor.no-ip.org;uid=sa;PWD=matanga;database=AgendaUniversitaria;Provider=SQLOLEDB"
 
-        mStringConexion = mArchivoConfiguracion.ReadLine
-        mArchivoConfiguracion.Close()
-
-        Return ServiciosEncriptacion.DesEncriptar(mStringConexion)
+        Return mStringConexion
 
     End Function
 
