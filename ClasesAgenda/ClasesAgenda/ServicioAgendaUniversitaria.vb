@@ -525,6 +525,8 @@
             Return Nothing
 
         End Try
+
+        Return 0
     End Function
 
 End Class
