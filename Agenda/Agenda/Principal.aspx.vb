@@ -7,7 +7,7 @@ Public Class Princiapal
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If (Request.Cookies("UserSettings") Is Nothing) Then
-            Response.Redirect("Loguin.aspx")
+            Response.Redirect("Login.aspx")
         Else : lblLogueado.Text = Request.Cookies("UserSettings")("usuario")
         End If
 
@@ -39,7 +39,7 @@ Public Class Princiapal
             myCookie = New HttpCookie("UserSettings")
             myCookie.Expires = DateTime.Now.AddDays(-1D)
             Response.Cookies.Add(myCookie)
-            Response.Redirect("Loguin.aspx")
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub

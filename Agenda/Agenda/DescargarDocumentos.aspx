@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <link rel="StyleSheet" href="Styles/agregarDocumento_style.css" type="text/css">
+     <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
     <style type="text/css">
         .style1
         {

@@ -19,7 +19,7 @@ Public Class quitarMateria
                     materias.Items.Add(materia.Nombre)
                 Next
             End If
-        Else : Response.Redirect("Loguin.aspx")
+        Else : Response.Redirect("Login.aspx")
         End If
 
     End Sub
@@ -52,7 +52,7 @@ Public Class quitarMateria
             myCookie = New HttpCookie("UserSettings")
             myCookie.Expires = DateTime.Now.AddDays(-1D)
             Response.Cookies.Add(myCookie)
-            Response.Redirect("Loguin.aspx")
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub

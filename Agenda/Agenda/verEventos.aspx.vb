@@ -15,7 +15,7 @@ Public Class verEventos
             If materiaSeleccionada = "" Then
                 cargarMaterias()
             End If
-        Else : Response.Redirect("Loguin.aspx")
+        Else : Response.Redirect("Login.aspx")
         End If
 
     End Sub
@@ -27,7 +27,7 @@ Public Class verEventos
             myCookie = New HttpCookie("UserSettings")
             myCookie.Expires = DateTime.Now.AddDays(-1D)
             Response.Cookies.Add(myCookie)
-            Response.Redirect("Loguin.aspx")
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub
@@ -62,7 +62,7 @@ Public Class verEventos
                 grdEventos.DataSource = tabla
                 grdEventos.DataBind()
             End If
-        Else : Response.Redirect("Loguin.aspx")
+        Else : Response.Redirect("Login.aspx")
         End If
 
     End Sub

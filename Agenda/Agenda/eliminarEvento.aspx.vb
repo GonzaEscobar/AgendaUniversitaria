@@ -44,7 +44,7 @@ Public Class eliminarEvento
                     Next
                 End If
             End If
-        Else : Response.Redirect("Loguin.aspx")
+        Else : Response.Redirect("Login.aspx")
         End If
 
     End Sub
@@ -56,7 +56,7 @@ Public Class eliminarEvento
             myCookie = New HttpCookie("UserSettings")
             myCookie.Expires = DateTime.Now.AddDays(-1D)
             Response.Cookies.Add(myCookie)
-            Response.Redirect("Loguin.aspx")
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub

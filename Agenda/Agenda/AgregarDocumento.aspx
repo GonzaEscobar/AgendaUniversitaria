@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="StyleSheet" href="Styles/agregarDocumento_style.css" type="text/css">
+    <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
     <style type="text/css">
         .style1
         {
@@ -57,7 +57,6 @@
         <span
             class="style1">
         <asp:TextBox ID="txtLink" runat="server" Width="272px"></asp:TextBox>
-
         <asp:Label ID="lblLink" runat="server" ForeColor="Red"></asp:Label>
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -67,7 +66,6 @@
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnAgregar" runat="server" Height="41px" Text="Agregar" 
             Enabled="False" Width="120px" />
-        &nbsp;&nbsp;
         <asp:Button ID="btnProbarLink" runat="server" Text="Probar Link" 
             Height="41px" Width="119px" />
         <br />

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Loguin
+Partial Public Class Login
 
     '''<summary>
     '''Control form1.
