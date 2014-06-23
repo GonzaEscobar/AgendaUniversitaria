@@ -16,7 +16,7 @@ Public Class AgregarDocumento
 
                 cargarMaterias()
             End If
-        Else : Response.Redirect("Loguin.aspx")
+        Else : Response.Redirect("Login.aspx")
         End If
 
     End Sub
@@ -91,16 +91,14 @@ Public Class AgregarDocumento
 
     End Sub
 
-    Protected Sub Menu1_MenuItemClick(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu1.MenuItemClick
+ Protected Sub salir_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Salir.Click
 
-        If e.Item.Value = "Salir" Then
-            If (Not Request.Cookies("UserSettings") Is Nothing) Then
-                Dim myCookie As HttpCookie
-                myCookie = New HttpCookie("UserSettings")
-                myCookie.Expires = DateTime.Now.AddDays(-1D)
-                Response.Cookies.Add(myCookie)
-                Response.Redirect("Loguin.aspx")
-            End If
+        If (Not Request.Cookies("UserSettings") Is Nothing) Then
+            Dim myCookie As HttpCookie
+            myCookie = New HttpCookie("UserSettings")
+            myCookie.Expires = DateTime.Now.AddDays(-1D)
+            Response.Cookies.Add(myCookie)
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub

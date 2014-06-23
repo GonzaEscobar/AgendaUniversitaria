@@ -3,10 +3,10 @@
 Public Class quitarMateria
     Inherits System.Web.UI.Page
     Dim wsAgenda As New ServicioAgendaUniversitaria
+    Dim materiasCarrera As New List(Of Materia)
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        Dim materiasCarrera As New List(Of Materia)
         materias.Items.Clear()
         Response.Cache.SetCacheability(HttpCacheability.ServerAndNoCache)
         Response.Cache.SetAllowResponseInBrowserHistory(False)
@@ -19,12 +19,13 @@ Public Class quitarMateria
                     materias.Items.Add(materia.Nombre)
                 Next
             End If
-        Else : Response.Redirect("Loguin.aspx")
+        Else : Response.Redirect("Login.aspx")
         End If
 
     End Sub
 
     Protected Sub btnQuitar_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnQuitar.Click
+
 
     End Sub
 
@@ -39,7 +40,7 @@ Public Class quitarMateria
                     idMateria = wsAgenda.obtenerIdMateria(materia.Text)
                     wsAgenda.quitarMateriaAUsuario(idUsuario, idMateria)
                 End If
-            Next
+            Next 
         End If
 
     End Sub
@@ -51,7 +52,7 @@ Public Class quitarMateria
             myCookie = New HttpCookie("UserSettings")
             myCookie.Expires = DateTime.Now.AddDays(-1D)
             Response.Cookies.Add(myCookie)
-            Response.Redirect("Loguin.aspx")
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub

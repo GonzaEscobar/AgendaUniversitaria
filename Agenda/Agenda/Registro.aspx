@@ -13,20 +13,19 @@
     <form id="form1" runat="server">
     <div class="caja" style="height: 549px">
         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">REGISTRO</span></h2>
-        <h3 style="width: 204px">Usuario<asp:Label ID="lblUsuario" Font-Size= "XX-Small" runat="server" ForeColor="Red"></asp:Label>
+        <h3 style="width: 204px">Usuario <asp:Label ID="lblUsuario" Font-Size= "XX-Small" runat="server" ForeColor="Red"></asp:Label>
         </h3>
         <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
         <h3 
-            style="width: 195px; height: 23px;">Nombre<asp:Label ID="lblNombre" Font-Size= "XX-Small" runat="server" ForeColor="Red"></asp:Label>      
+            style="width: 195px; height: 23px;">Nombre <asp:Label ID="lblNombre" Font-Size= "XX-Small" runat="server" ForeColor="Red"></asp:Label>      
         </h3>
         <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>  
-        <h3 style="width: 208px">Contraseña<asp:Label ID="lblContraseña" Font-Size= "XX-Small" runat="server" ForeColor="Red"></asp:Label>
+        <h3 style="width: 208px">Contraseña <asp:Label ID="lblContraseña" Font-Size= "XX-Small" runat="server" ForeColor="Red"></asp:Label>
         </h3>
         <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password"></asp:TextBox>   
         <h3 style="width: 176px">Confirmar Contraseña</h3>  
         <asp:TextBox ID="txtConfirmar"  runat="server" TextMode="Password"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblRespuesta" runat="server" BorderColor="#66FF66" 
+        &nbsp;<asp:Label ID="lblRespuesta" runat="server" BorderColor="#66FF66" 
             ForeColor="#99FF66"></asp:Label>
         <br />
         <br />

@@ -101,7 +101,7 @@
     <Content Include="DescargarDocumentos.aspx" />
     <Content Include="eliminarEvento.aspx" />
     <Content Include="HTMLPage1.htm" />
-    <Content Include="Loguin.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="quitarMateria.aspx" />
     <Content Include="Styles\Site.css" />
@@ -174,11 +174,11 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Loguin.aspx.designer.vb">
-      <DependentUpon>Loguin.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Loguin.aspx.vb">
-      <DependentUpon>Loguin.aspx</DependentUpon>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />

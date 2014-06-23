@@ -1,104 +1,76 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="AgregarDocumento.aspx.vb" Inherits="Agenda.AgregarDocumento" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
     <style type="text/css">
         .style1
         {
-            color: #FFFFFF;
+            color: #000099;
+        }
+        .style2
+        {
+            font-family: "Comic Sans MS";
+            font-size: 16px;
+        }
+        .style3
+        {
+            color: #0080FF;
+            font-weight: 700;
+            font-family: "Comic Sans MS";
+            font-size: 16px;
+        }
+        .style4
+        {
+            color: #0080FF;
+            font-size: 16px;
         }
     </style>
 </head>
 <body background=  "fondoAzul.jpg">
-    <form id="form1" runat="server">
-    <div style="height: 289px">
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
-            class="style1"><asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
-            DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
-            ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
-            <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
-            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-            <DynamicMenuStyle BackColor="#B5C7DE" />
-            <DynamicSelectedStyle BackColor="#507CD1" />
-            <Items>
-                <asp:MenuItem Text="Documentos" Value="Documentos">
-                    <asp:MenuItem NavigateUrl="AgregarDocumento.aspx" Text="Agregar" Value="mento">
-                    </asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="DescargarDocumentos.aspx" Text="Descargar" 
-                        Value="Descargar"></asp:MenuItem>
-                </asp:MenuItem>
-                <asp:MenuItem Text="Agenda" Value="Agenda">
-                    <asp:MenuItem Text="Materia" Value="Materia">
-                        <asp:MenuItem NavigateUrl="~/agregarMateria.aspx" Text="Agregar" 
-                            Value="Agregar"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/quitarMateria.aspx" Text="Eliminar" 
-                            Value="Eliminar"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/verMaterias.aspx" Text="Ver" Value="Ver">
-                        </asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="Evento" Value="Evento">
-                        <asp:MenuItem NavigateUrl="~/agregarEvento.aspx" Text="Agregar" Value="Agregar">
-                        </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/verEventos.aspx" Text="Ver" Value="Ver">
-                        </asp:MenuItem>
-                    </asp:MenuItem>
-                </asp:MenuItem>
-                <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
-                </asp:MenuItem>
-                <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
-            </Items>
-            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
-            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-            <StaticSelectedStyle BackColor="#507CD1" />
-        </asp:Menu>
-        </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span 
-            class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
-        Agregar Documento&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblLogueado" runat="server" ForeColor="White"></asp:Label>
-&nbsp;
+    <form id="form1" runat="server"> 
+    <asp:LinkButton ID="Salir" runat="server"><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>      
+    <div class="caja">
+      <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
+        <span
+            class="style1">
+        <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">AGREGAR DOCUMENTO<pan></h2>
         <br />
-&nbsp;<br />
-        &nbsp;&nbsp;<span class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        Materia&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="materias" runat="server" Height="24px" Width="224px">
+        <span class="style2"><strong style="color: #0080FF">Materia&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="materias" 
+            runat="server" Height="24px" Width="292px" style="color: #003399">
             <asp:ListItem Selected="True"></asp:ListItem>
         </asp:DropDownList>
-&nbsp;&nbsp;&nbsp;&nbsp;
-        </span>
+        <br />
         <asp:Label ID="lblMateria" runat="server" ForeColor="Red" CssClass="style1"></asp:Label>
         <br class="style1" />
         <br />
-        <span class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre</span>&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtNombre" runat="server" Width="224px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="style4"><strong style="font-family: 'Comic Sans MS'">Nombre</strong></span>
+        <asp:TextBox ID="txtNombre" runat="server" Width="269px"></asp:TextBox>
         <asp:Label ID="lblNombre" runat="server" ForeColor="Red"></asp:Label>
         <br />
         <br />
-        <span class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtLink" runat="server" Width="224px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <span
+            class="style3">
+        Link </span>
+        <span
+            class="style1">
+        <asp:TextBox ID="txtLink" runat="server" Width="272px"></asp:TextBox>
         <asp:Label ID="lblLink" runat="server" ForeColor="Red"></asp:Label>
         <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblRespuesta" runat="server" ForeColor="#99FF33" 
+            style="font-weight: 700; font-family: 'Comic Sans MS'"></asp:Label>
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblRespuesta" runat="server" ForeColor="#99FF33"></asp:Label>
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnAgregar" runat="server" Height="26px" Text="Agregar" 
-            Enabled="False" />
-    
-    &nbsp;&nbsp;
-    
+&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnAgregar" runat="server" Height="41px" Text="Agregar" 
+            Enabled="False" Width="120px" />
         <asp:Button ID="btnProbarLink" runat="server" Text="Probar Link" 
-            Height="26px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblRespuestaLink" runat="server" ForeColor="Red"></asp:Label>
-    
+            Height="41px" Width="119px" />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblRespuestaLink" runat="server" ForeColor="Red"></asp:Label>   
         </div>
     </form>
 </body>

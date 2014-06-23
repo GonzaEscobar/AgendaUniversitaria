@@ -53,7 +53,7 @@ Public Class WebForm1
 
     Protected Sub btnIngresar_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnIngresar.Click
 
-        Response.Redirect("Loguin.aspx")
+        Response.Redirect("Login.aspx")
 
     End Sub
 

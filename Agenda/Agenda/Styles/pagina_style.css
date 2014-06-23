@@ -1,0 +1,81 @@
+
+div.caja{
+
+		background:#f0f0f0;
+		width:300px;
+		border:1px solid white;
+		margin: 5px auto;
+		padding: 1em;
+		border-radius: 30px;
+		
+}
+
+
+h1{
+	font-family: arial;
+	color:#0080ff;
+	font-size: 30px;
+}
+
+h2{
+	font-family: arial;
+	color:#0080ff;
+	font-size: 30px;
+}
+
+h3
+{
+    font-family: "Comic Sans MS";
+    color: #0080ff;
+    font-size: 16px; 
+    }
+
+input[type=text], input[type=password]{
+	margin:0 0 1em 0;
+	width:175px;
+	border: 0px;
+	padding:.8em;
+	border-radius: 3px;
+	color:gray;
+	display:block;
+	clear: both;
+}
+
+input[type=submit]{
+padding:.5em;
+background:#0080ff;
+border:none;
+color: white;
+font-family: arial black;
+font-size:14px;
+border-radius: 30px;
+text-decoration: none;
+}
+
+
+
+input[type=submit]:hover, form a:hover
+{
+    background:#0040ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

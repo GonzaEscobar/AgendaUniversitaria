@@ -48,7 +48,7 @@ div.contenedor{
 	height:180px;
 	float: left;
 	-webkit-transition: height 0.2s;
-	border-radius: 10%;
+	-webkit-border-radius: 10%;
 }
 
 div#btnAgregarDocumento{

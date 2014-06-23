@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Loguin.aspx.vb" Inherits="Agenda.Loguin" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="Agenda.Login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -20,7 +20,11 @@ div.caja{
 		
 }
 
-
+.style4
+        {
+            color: #0080FF;
+            font-size: 16px;
+        }
 h1{
 	font-family: arial;
 	color:#0080ff;
@@ -66,18 +70,17 @@ input[type=submit]:hover, form a:hover
     background:#0040ff;
 }
 </style>
-
-
-
 <body background=  "fondoAzul.jpg">
     <form id="form1" runat="server">
 	<div class="caja">
         <img class= "logo" src= "logo.png" style="width: 96px; height: 79px">
 		<h1>Login</h1>
         <br />
-		<asp:TextBox ID="txtUsuario" runat="server" Text="Ingrese su Usuario" 
+        <span class="style4"><strong style="font-family: 'Comic Sans MS'">Usuario</strong></span>
+		<asp:TextBox ID="txtUsuario" runat="server" 
             style="margin-left: 0px"></asp:TextBox>
-        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password">Ingrese su Contraseña</asp:TextBox>
+            <span class="style4"><strong style="font-family: 'Comic Sans MS'">Contraseña</strong></span>
+        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
         <br />
         <asp:Label ID="lblRespuesta" ForeColor="Red" Font-Names="Arial Black" runat="server"></asp:Label>
         <br />
