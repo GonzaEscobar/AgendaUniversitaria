@@ -3,54 +3,66 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title></title>
+    <link rel="StyleSheet" href="Styles/agregarDocumento_style.css" type="text/css">
+    <style type="text/css">
+        .style1
+        {
+            color: #000099;
+        }
+        .style2
+        {
+            font-family: "Comic Sans MS";
+            font-size: 16px;
+        }
+        .style3
+        {
+            color: #0080FF;
+            font-weight: 700;
+            font-family: "Comic Sans MS";
+            font-size: 16px;
+        }
+        .style4
+        {
+            color: #0080FF;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body background=  "fondoAzul.jpg">
     <form id="form1" runat="server">
     <div style="color: #FFFFFF">
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        Eventos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-        <asp:Label ID="lblLogueado" runat="server" ForeColor="Black"></asp:Label>
-&nbsp;&nbsp;
-        <asp:LinkButton ID="salir" runat="server" ForeColor="White">Salir</asp:LinkButton>
-    
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        Materias&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="materias" runat="server" Height="19px" Width="198px">
+    <asp:LinkButton ID="Salir" runat="server"><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
+    <div class= "caja">
+        <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
+        <span class="style1">&nbsp;<br />
+         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">VER EVENTOS<pan></h2>
+<span class="style2"><strong style="color: #0080FF">Materia&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="materias" 
+            runat="server" Height="24px" Width="292px" style="color: #003399">
+            <asp:ListItem Selected="True"></asp:ListItem>
         </asp:DropDownList>
-&nbsp;&nbsp;
-        <asp:Button ID="btnMostrar" runat="server" Text="Mostrar" />
         <br />
         <br />
-        <asp:GridView ID="grdEventos" runat="server" style="margin-left: 121px" 
-            BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" 
-            CellPadding="4" ForeColor="Black" GridLines="Vertical" 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnMostrar" runat="server" Text="Mostrar" />
+        <br />
+        <br />
+        <asp:GridView ID="grdEventos" runat="server" style="margin-left: 0px" 
+            CellPadding="4" ForeColor="#333333" GridLines="None" 
             CaptionAlign="Right">
             <AlternatingRowStyle BackColor="White" />
-            <FooterStyle BackColor="#CCCC99" />
-            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-            <RowStyle BackColor="#F7F7DE" />
-            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#FBFBF2" />
-            <SortedAscendingHeaderStyle BackColor="#848384" />
-            <SortedDescendingCellStyle BackColor="#EAEAD3" />
-            <SortedDescendingHeaderStyle BackColor="#575357" />
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    
     </div>
     </form>
 </body>

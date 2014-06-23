@@ -30,14 +30,9 @@
 </head>
 <body background=  "fondoAzul.jpg">
     <form id="form1" runat="server"> 
-    <asp:LinkButton ID="Salir" runat="server"><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>   
-    
-    
+    <asp:LinkButton ID="Salir" runat="server"><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>      
     <div class="caja">
-
-
-        <asp:Label ID="lblLogueado" runat="server" ForeColor="#0080ff" 
-            style="color: #003399; font-family: 'Comic Sans MS'"></asp:Label>
+      <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <span
             class="style1">
         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">AGREGAR DOCUMENTO<pan></h2>
@@ -46,15 +41,12 @@
             runat="server" Height="24px" Width="292px" style="color: #003399">
             <asp:ListItem Selected="True"></asp:ListItem>
         </asp:DropDownList>
-
         <br />
-
         <asp:Label ID="lblMateria" runat="server" ForeColor="Red" CssClass="style1"></asp:Label>
         <br class="style1" />
         <br />
         <span class="style4"><strong style="font-family: 'Comic Sans MS'">Nombre</strong></span>
         <asp:TextBox ID="txtNombre" runat="server" Width="269px"></asp:TextBox>
-
         <asp:Label ID="lblNombre" runat="server" ForeColor="Red"></asp:Label>
         <br />
         <br />
@@ -80,8 +72,7 @@
             Height="41px" Width="119px" />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblRespuestaLink" runat="server" ForeColor="Red"></asp:Label>
-    
+        <asp:Label ID="lblRespuestaLink" runat="server" ForeColor="Red"></asp:Label>   
         </div>
     </form>
 </body>

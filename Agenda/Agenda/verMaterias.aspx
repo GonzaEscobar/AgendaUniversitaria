@@ -20,17 +20,14 @@
             font-size: 30px;
         }
         div.caja{
-
 		background:#f0f0f0;
 		width:308px;
 		border:1px solid white;
 		margin: 22px auto 50px auto;
 		padding: 1.5em;
-		border-radius: 10px;
-		
+		border-radius: 10px;	
 }
-    </style>
-    
+    </style>    
 </head>
 <body background=  "fondoAzul.jpg">
     <form id="form1" runat="server">
@@ -38,13 +35,7 @@
     <div class="caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <div class="style2">
-        <br />
-            &nbsp;<span 
-                <h2 style="text-align: center"><span 
-                style="font-family: Aharoni; color: #003399; text-align: left;" 
-                class="style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VER&nbsp;MATERIAS</span></h2>
-        <br />
-        <br />
+            <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">VER MATERIAS<pan></h2>
         <asp:GridView ID="grdMaterias" runat="server" CellPadding="4" 
             ForeColor="#333333" GridLines="None" style="margin-left: 6px" 
                 HorizontalAlign="Center" Width="280px">
@@ -59,12 +50,7 @@
             <SortedAscendingHeaderStyle BackColor="#6D95E1" />
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
-        </asp:GridView>
-        <br />
-        <br />
-        <br />
-        <br />
-    
+        </asp:GridView> 
     </div>
     </form>
 </body>
