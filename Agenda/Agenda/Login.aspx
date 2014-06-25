@@ -6,8 +6,6 @@
 <head runat="server">
     <title></title>
 </head>
-
-
 <style>
 div.caja{
 
@@ -56,7 +54,6 @@ border-radius: 3px;
 text-decoration: none;
 }
 
-
 img.logo{
 	margin: 0px auto;
 	background-color: rgba(255,255,255);
@@ -86,11 +83,8 @@ input[type=submit]:hover, form a:hover
         <br />
         <asp:Button ID="btnIngresar" runat="server" Text="Ingresar"/>
         <a href="Registro.aspx" >Registro</a>
-        <br />
-        
+        <br />    
 	</div>
-
-
     </form>
 </body>
 </html>
