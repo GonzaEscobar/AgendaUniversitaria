@@ -20,18 +20,6 @@ Public Class verEventos
 
     End Sub
 
-    Protected Sub salir_Click(ByVal sender As Object, ByVal e As EventArgs) Handles salir.Click
-
-        If (Not Request.Cookies("UserSettings") Is Nothing) Then
-            Dim myCookie As HttpCookie
-            myCookie = New HttpCookie("UserSettings")
-            myCookie.Expires = DateTime.Now.AddDays(-1D)
-            Response.Cookies.Add(myCookie)
-            Response.Redirect("Login.aspx")
-        End If
-
-    End Sub
-
     Private Sub verEventos_PreLoad(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreLoad
 
         materiaSeleccionada = materias.Text
@@ -45,6 +33,7 @@ Public Class verEventos
         Dim tabla As New DataTable
         Dim idUsuario As Integer
         Dim idMateria As Integer
+        lblRespuesta.Text = ""
         If materiaSeleccionada <> "-Por favor seleccione-" Then
             grdEventos.DataBind()
             tabla.Columns.Add("Evento")
@@ -61,6 +50,7 @@ Public Class verEventos
                 Next
                 grdEventos.DataSource = tabla
                 grdEventos.DataBind()
+            Else : lblRespuesta.Text = " No hay eventos para mostrar"
             End If
         Else : Response.Redirect("Login.aspx")
         End If
@@ -77,6 +67,21 @@ Public Class verEventos
             For Each materia As Materia In materiasInscriptas
                 materias.Items.Add(materia.Nombre)
             Next
+        Else : lblRespuesta.Text = " No hay eventos para mostrar"
+        End If
+
+    End Sub
+
+    Protected Sub Menu1_MenuItemClick(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu1.MenuItemClick
+
+        If Menu1.SelectedItem.Text = "Salir" Then
+            If (Not Request.Cookies("UserSettings") Is Nothing) Then
+                Dim myCookie As HttpCookie
+                myCookie = New HttpCookie("UserSettings")
+                myCookie.Expires = DateTime.Now.AddDays(-1D)
+                Response.Cookies.Add(myCookie)
+                Response.Redirect("Login.aspx")
+            End If
         End If
 
     End Sub

@@ -28,7 +28,7 @@ Public Class Documentos
         Dim tabla As New DataTable
         Dim link As New HyperLinkColumn
         grdDocumentos.DataBind()
-        lblLink.Text = ""
+        lblRespuesta.Text = ""
         If materias IsNot Nothing And materiaSeleccionada <> "" And materiaSeleccionada <> "-Por favor seleccione-" Then
             documentos = wsAgenda.obtenerDocumentos(materiaSeleccionada)
             If documentos IsNot Nothing Then
@@ -46,6 +46,7 @@ Public Class Documentos
                 Next
                 grdDocumentos.DataSource = tabla
                 grdDocumentos.DataBind()
+            Else : lblRespuesta.Text = "No hay documentos para descargar de esta materia"
             End If
         End If
 
@@ -59,14 +60,16 @@ Public Class Documentos
     End Sub
 
 
-    Protected Sub salir_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Salir.Click
+    Protected Sub Menu1_MenuItemClick(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu1.MenuItemClick
 
-        If (Not Request.Cookies("UserSettings") Is Nothing) Then
-            Dim myCookie As HttpCookie
-            myCookie = New HttpCookie("UserSettings")
-            myCookie.Expires = DateTime.Now.AddDays(-1D)
-            Response.Cookies.Add(myCookie)
-            Response.Redirect("Login.aspx")
+        If Menu1.SelectedItem.Text = "Salir" Then
+            If (Not Request.Cookies("UserSettings") Is Nothing) Then
+                Dim myCookie As HttpCookie
+                myCookie = New HttpCookie("UserSettings")
+                myCookie.Expires = DateTime.Now.AddDays(-1D)
+                Response.Cookies.Add(myCookie)
+                Response.Redirect("Login.aspx")
+            End If
         End If
 
     End Sub
@@ -84,12 +87,12 @@ Public Class Documentos
                     With proceso
                         .StartInfo.FileName = documento.Link
                         .Start()
-                        lblLink.Text = ""
+                        lblRespuesta.Text = ""
                     End With
                     wsAgenda.actualizarDescargas(documento.Codigo, documento.Descargas + 1)
                     grdDocumentos.Rows(grdDocumentos.SelectedIndex).Cells(3).Text = documento.Descargas + 1
                 Catch ex As Exception
-                    lblLink.Text = "Documento inaccesible"
+                    lblRespuesta.Text = "Documento inaccesible"
                 End Try
             End If
         Next

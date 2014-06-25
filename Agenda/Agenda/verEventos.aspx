@@ -16,39 +16,40 @@
             font-family: "Comic Sans MS";
             font-size: 16px;
         }
-        .style3
-        {
-            color: #0080FF;
-            font-weight: 700;
-            font-family: "Comic Sans MS";
-            font-size: 16px;
-        }
-        .style4
-        {
-            color: #0080FF;
-            font-size: 16px;
-        }
-    </style>
+        </style>
 </head>
-<body background=  "fondoAzul.jpg">
+<body background=  "fondo2.jpg">
     <form id="form1" runat="server">
     <div style="color: #FFFFFF">
-    <asp:LinkButton ID="Salir" runat="server"><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
+      <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
+        Orientation="Horizontal" RenderingMode="Table" align="center">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/agregarEvento.aspx" 
+                Text="Agregar Evento" Value="Descargar Documento"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/eliminarEvento.aspx" Text="Eliminar Evento" 
+                Value="Quitar Materia"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
+            </asp:MenuItem>
+            <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+        </Items>
+    </asp:Menu>
+    <br />
     <div class= "caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <span class="style1">&nbsp;<br />
-         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">VER EVENTOS<pan></h2>
-<span class="style2"><strong style="color: #0080FF">Materia&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="materias" 
-            runat="server" Height="24px" Width="292px" style="color: #003399">
+         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">EVENTOS<pan></h2>
+&nbsp;<span class="style2"><strong style="color: #0080FF">Materia&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="materias" 
+            runat="server" Height="24px" Width="292px" 
+            style="color: #003399; margin-left: 5px;">
             <asp:ListItem Selected="True"></asp:ListItem>
         </asp:DropDownList>
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnMostrar" runat="server" Text="Mostrar" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnMostrar" runat="server" Text="Mostrar" />
         <br />
         <br />
-        <asp:GridView ID="grdEventos" runat="server" style="margin-left: 0px" 
+        <asp:GridView ID="grdEventos" runat="server" style="margin-left: 9px" 
             CellPadding="4" ForeColor="#333333" GridLines="None" 
             CaptionAlign="Right">
             <AlternatingRowStyle BackColor="White" />
@@ -63,7 +64,9 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-    </div>
+        <span class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label 
+                ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
+            </div>
     </form>
 </body>
 </html>

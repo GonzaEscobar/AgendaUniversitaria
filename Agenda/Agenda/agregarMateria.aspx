@@ -6,33 +6,22 @@
 <head id="Head1" runat="server">
     <title></title>
     <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
-    <style type="text/css">
-        .style1
-        {
-            color: #000099;
-        }
-        .style2
-        {
-            font-family: "Comic Sans MS";
-            font-size: 16px;
-        }
-        .style3
-        {
-            color: #0080FF;
-            font-weight: 700;
-            font-family: "Comic Sans MS";
-            font-size: 16px;
-        }
-        .style4
-        {
-            color: #0080FF;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body background=  "fondoAzul.jpg">
+    </head>
+<body background=  "fondo1.jpg">
     <form id="form1" runat="server">
-    <asp:LinkButton ID="Salir" runat="server"  ><h5></h5><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
+    <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
+        Orientation="Horizontal" RenderingMode="Table" align="center">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/verMaterias.aspx" 
+                Text="Ver Materias" Value="Descargar Documento"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/quitarMateria.aspx" Text="Quitar Materia" 
+                Value="Quitar Materia"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
+            </asp:MenuItem>
+            <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+        </Items>
+    </asp:Menu>
+    <br />
     <div class="caja">
     <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
             <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">AGREGAR MATERIAS</h2>   
@@ -41,7 +30,7 @@
             style="margin-left: 0px; color: #003399; font-family: Arial;">
         </asp:CheckBoxList>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button 
             ID="btnAgregar" runat="server" Text="Agregar" Width="149px" />
         &nbsp;
         <br />

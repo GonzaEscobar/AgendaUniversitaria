@@ -7,10 +7,6 @@
     <title></title>
      <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
     <style type="text/css">
-        .style1
-        {
-            color: #000099;
-        }
         .style2
         {
             font-family: "Comic Sans MS";
@@ -23,11 +19,6 @@
             font-family: "Comic Sans MS";
             font-size: 16px;
         }
-        .style4
-        {
-            color: #0080FF;
-            font-size: 16px;
-        }
         div.caja{
 
 		background:#f0f0f0;
@@ -38,11 +29,20 @@
 		border-radius: 10px;
 		
 }
-    </style>   
+    </style> 
 </head>
-<body background=  "fondoAzul.jpg">
+<body background=  "fondo.jpg">
     <form id="form1" runat="server">
-    <asp:LinkButton ID="Salir" runat="server"  ><h5></h5><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
+    <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
+        Orientation="Horizontal" RenderingMode="Table" align="center">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/AgregarDocumento.aspx" 
+                Text="Agregar Documento" Value="Descargar Documento"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
+            </asp:MenuItem>
+            <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+        </Items>
+    </asp:Menu>
     <div class="caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <div class="style2">
@@ -54,11 +54,12 @@ Materias&nbsp;</strong></span>
         </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
         <br />
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblLink" runat="server" ForeColor="Red"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label 
+                ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>

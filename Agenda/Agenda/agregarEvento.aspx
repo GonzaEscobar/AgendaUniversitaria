@@ -18,9 +18,21 @@
         }
         </style>
 </head>
-<body background=  "fondoAzul.jpg">
+<body background=  "fondo2.jpg">
     <form id="form1" runat="server"> 
-    <asp:LinkButton ID="Salir" runat="server"><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>      
+    <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
+        Orientation="Horizontal" RenderingMode="Table" align="center">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/verEventos.aspx" 
+                Text="Ver Eventos" Value="Descargar Documento"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/eliminarEvento.aspx" Text="Eliminar Evento" 
+                Value="Quitar Materia"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
+            </asp:MenuItem>
+            <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+        </Items>
+    </asp:Menu>
+    <br />
  <div class="caja">
       <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <span
@@ -62,11 +74,11 @@
         <asp:Label ID="lblFecha" runat="server" ForeColor="#FF6666"></asp:Label>
         <br />
         <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblRespuesta" runat="server" ForeColor="#66FF66"></asp:Label>
         <br />
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnAgregar" runat="server" Text="Agregar" />
     </div>
     </form>

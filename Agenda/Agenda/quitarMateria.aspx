@@ -11,39 +11,37 @@
         {
             color: #000099;
         }
-        .style2
-        {
-            font-family: "Comic Sans MS";
-            font-size: 16px;
-        }
-        .style3
-        {
-            color: #0080FF;
-            font-weight: 700;
-            font-family: "Comic Sans MS";
-            font-size: 16px;
-        }
-        .style4
-        {
-            color: #0080FF;
-            font-size: 16px;
-        }
-    </style>
+        </style>
 </head>
-<body background=  "fondoAzul.jpg">
+<body background=  "fondo1.jpg">
     <form id="form1" runat="server">
-    <asp:LinkButton ID="Salir" runat="server"><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
+   <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
+        Orientation="Horizontal" RenderingMode="Table" align="center">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/verMaterias.aspx" Text="Ver Materias" 
+                Value="Quitar Materia"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/agregarMateria.aspx" 
+                Text="Agregar Materia" Value="Descargar Documento"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
+            </asp:MenuItem>
+            <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+        </Items>
+    </asp:Menu>
+     <br />
     <div class= "caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <span class="style1">&nbsp;<br />
         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">QUITAR MATERIA<pan></h2>
-        <asp:CheckBoxList ID="materias" runat="server" Height="23px" Width="301px" 
-            BackColor="#99CCFF" BorderColor="#F0F0F0" BorderStyle="Solid" BorderWidth="1px"       
+        <asp:CheckBoxList ID="materias" runat="server" Height="19px" Width="298px" 
+            BackColor="#99CCFF" BorderColor="#F0F0F0" BorderStyle="Solid" BorderWidth="1px"         
             style="text-align: left; margin-left: 0px; font-family: Arial; color: #003399; background-color: #F0F0F0;">
         </asp:CheckBoxList>
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
         <asp:Button ID="btnQuitar" runat="server" Text="Quitar" />
+        <br />
+        <br />
+        <asp:Label ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
     </div>
     </form>
 </body>

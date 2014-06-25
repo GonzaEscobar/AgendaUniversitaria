@@ -10,15 +10,6 @@
         {
             color: #FFFFFF;
         }
-        .style3
-        {
-            color: #0080FF;
-            font-family: Aharoni;
-        }
-        .style4
-        {
-            font-size: 30px;
-        }
         div.caja{
 		background:#f0f0f0;
 		width:308px;
@@ -29,16 +20,28 @@
 }
     </style>    
 </head>
-<body background=  "fondoAzul.jpg">
+<body background=  "fondo1.jpg">
     <form id="form1" runat="server">
-    <asp:LinkButton ID="Salir" runat="server"  ><h5></h5><img class="Salir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
+    <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
+        Orientation="Horizontal" RenderingMode="Table" align="center">
+        <Items>
+            <asp:MenuItem NavigateUrl="~/agregarMateria.aspx" 
+                Text="Agregar Materia" Value="Descargar Documento"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/quitarMateria.aspx" Text="Quitar Materia" 
+                Value="Quitar Materia"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
+            </asp:MenuItem>
+            <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
+        </Items>
+    </asp:Menu>
     <div class="caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <div class="style2">
-            <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">VER MATERIAS<pan></h2>
+            <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">MATERIAS<pan></span></h2>
+            <span style="font-family: Aharoni; color: #003399">
         <asp:GridView ID="grdMaterias" runat="server" CellPadding="4" 
             ForeColor="#333333" GridLines="None" style="margin-left: 6px" 
-                HorizontalAlign="Center" Width="280px">
+                HorizontalAlign="Center" Width="280px" CssClass="caja">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -51,6 +54,8 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView> 
+     <asp:Label 
+                ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
     </div>
     </form>
 </body>
