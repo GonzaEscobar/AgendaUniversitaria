@@ -67,7 +67,7 @@ input[type=submit]:hover, form a:hover
     background:#0040ff;
 }
 </style>
-<body background=  "fondoAzul.jpg">
+<body background=  "logo.jpg">
     <form id="form1" runat="server">
 	<div class="caja">
         <img class= "logo" src= "logo.png" style="width: 96px; height: 79px">
