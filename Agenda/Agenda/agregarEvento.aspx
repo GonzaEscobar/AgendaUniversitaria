@@ -38,14 +38,12 @@
         <span
             class="style1">
         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">AGREGAR EVENTO<pan></h2>
-<span class="style2"><strong style="color: #0080FF">Materia&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="materias" 
+        <span class="style2"><strong style="color: #0080FF">Materia&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="materias" 
             runat="server" Height="24px" Width="292px" style="color: #003399">
             <asp:ListItem Selected="True"></asp:ListItem>
         </asp:DropDownList>
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-        <asp:Label ID="lblMateria" runat="server" ForeColor="#FF5050"></asp:Label>
+        <center><asp:Label ID="lblMateria" runat="server" ForeColor="#FF5050"></asp:Label></center>
         <br />
-        &nbsp;&nbsp;&nbsp;
         <br />
       <span class="style2"><strong style="color: #0080FF">Evento&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="eventos" 
             runat="server" Height="24px" Width="292px" style="color: #003399">
@@ -53,8 +51,8 @@
         </asp:DropDownList>
         <span class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
-        <asp:Label ID="lblEvento" runat="server" ForeColor="#FF5050" CssClass="style1"></asp:Label>
-        <br class="style1" />
+        <center><asp:Label ID="lblEvento" runat="server" ForeColor="#FF5050" CssClass="style1"></asp:Label>
+        <br class="style1" /></center>
         <br />
        <span class="style2"><strong style="color: #0080FF">Evento&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;
         <asp:Calendar ID="calFecha" runat="server" BackColor="White" 
@@ -70,16 +68,12 @@
                 Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
             <TodayDayStyle BackColor="#CCCCCC" />
         </asp:Calendar>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblFecha" runat="server" ForeColor="#FF6666"></asp:Label>
         <br />
+        <center> <asp:Label ID="lblFecha" runat="server" ForeColor="#FF6666"></asp:Label></center>
         <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblRespuesta" runat="server" ForeColor="#66FF66"></asp:Label>
+        <center><asp:Label ID="lblRespuesta" runat="server" ForeColor="#66FF66"></asp:Label></center>
         <br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnAgregar" runat="server" Text="Agregar" />
+        <center><asp:Button ID="btnAgregar" runat="server" Text="Agregar" /></center>
     </div>
     </form>
 </body>

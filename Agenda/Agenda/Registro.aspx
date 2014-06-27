@@ -25,12 +25,12 @@
         <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password"></asp:TextBox>   
         <h3 style="width: 176px">Confirmar Contraseña</h3>  
         <asp:TextBox ID="txtConfirmar"  runat="server" TextMode="Password"></asp:TextBox>
-        &nbsp;<asp:Label ID="lblRespuesta" runat="server" BorderColor="#66FF66" 
-            ForeColor="#99FF66"></asp:Label>
+        <center><asp:Label ID="lblRespuesta" runat="server" BorderColor="#66FF66" 
+            ForeColor="#99FF66"></asp:Label></center>
         <br />
         <br />
-        <asp:Button ID="btnRegistrar" runat="server"  Text="Registrar"/>
-        <asp:Button ID="btnIngresar" runat="server" Text="Ingresar"/>
+        <center><asp:Button ID="btnRegistrar" runat="server"  Text="Registrar"/>
+        <asp:Button ID="btnIngresar" runat="server" Text="Ingresar"/></center>
       </div>
     </form>
 </body>

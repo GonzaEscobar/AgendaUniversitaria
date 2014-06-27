@@ -47,21 +47,16 @@
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <div class="style2">
         <h2 style="text-align: center"> <span style="font-family: Aharoni; color: #003399">DESCARGAR DOCUMENTO</h2>   
-&nbsp;<span class="style2">&nbsp;&nbsp;</span><span class="style3"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Materias&nbsp;</strong></span>
+        <center><span class="style2"></span><span class="style3"><strong>Materias&nbsp;</strong></span>
         <asp:DropDownList ID="materias" runat="server" Height="20px" Width="212px">
             <asp:ListItem></asp:ListItem>
-        </asp:DropDownList>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+        </asp:DropDownList></center>
+        <br />
+        <center><asp:Button ID="btnBuscar" runat="server" Text="Buscar" /></center>
         <br />
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label 
-                ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <center><asp:Label ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label></center>
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
         <asp:GridView ID="grdDocumentos" runat="server" CellPadding="4" 
             ForeColor="#333333" GridLines="None" style="margin-left: 0px" 

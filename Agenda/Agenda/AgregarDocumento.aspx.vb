@@ -75,19 +75,21 @@ Public Class AgregarDocumento
 
     Protected Sub btnProbarLink_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnProbarLink.Click
 
-        Try
-            Dim proceso As New System.Diagnostics.Process
-            With proceso
-                .StartInfo.FileName = txtLink.Text
-                .Start()
-                lblRespuestaLink.ForeColor = Drawing.Color.GreenYellow
-                lblRespuestaLink.Text = "Link Correcto"
-                btnAgregar.Enabled = True
-            End With
-        Catch ex As Exception
+        Dim sUrl As String = txtLink.Text
+        Dim sScript As String = "<script language =javascript> "
+           
+        If txtLink.Text = "" Then
             lblRespuestaLink.ForeColor = Drawing.Color.Red
             lblRespuestaLink.Text = "Ingrese un link para probar"
-        End Try
+        Else
+            lblRespuestaLink.ForeColor = Drawing.Color.GreenYellow
+            lblRespuestaLink.Text = "Link Correcto"
+            btnAgregar.Enabled = True
+            sScript += "window.open('" & sUrl & "',null,'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=300,left=100,top=100');"
+            sScript += "</script> "
+            Response.Write(sScript)
+            
+        End If
 
     End Sub
 

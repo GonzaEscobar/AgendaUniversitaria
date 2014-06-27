@@ -52,12 +52,12 @@
             <asp:ListItem Selected="True"></asp:ListItem>
         </asp:DropDownList>
         <br />
-        <asp:Label ID="lblMateria" runat="server" ForeColor="Red" CssClass="style1"></asp:Label>
+       <center><asp:Label ID="lblMateria" runat="server" ForeColor="Red" CssClass="style1"></asp:Label></center> 
         <br class="style1" />
         <br />
         <span class="style4"><strong style="font-family: 'Comic Sans MS'">Nombre</strong></span>
         <asp:TextBox ID="txtNombre" runat="server" Width="269px"></asp:TextBox>
-        <asp:Label ID="lblNombre" runat="server" ForeColor="Red"></asp:Label>
+        <center><asp:Label ID="lblNombre" runat="server" ForeColor="Red"></asp:Label></center>
         <br />
         <br />
         </span>
@@ -67,20 +67,18 @@
         <span
             class="style1">
         <asp:TextBox ID="txtLink" runat="server" Width="272px"></asp:TextBox>
-        <asp:Label ID="lblLink" runat="server" ForeColor="Red"></asp:Label>
+        <center><asp:Label ID="lblLink" runat="server" ForeColor="Red"></asp:Label></center>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblRespuesta" runat="server" ForeColor="#99FF33" 
-            style="font-weight: 700; font-family: 'Comic Sans MS'"></asp:Label>
+        <center><asp:Label ID="lblRespuesta" runat="server" ForeColor="#99FF33" 
+            style="font-weight: 700; font-family: 'Comic Sans MS'"></asp:Label></center>
         <br />
-&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnAgregar" runat="server" Height="41px" Text="Agregar" 
+        <center><asp:Button ID="btnAgregar" runat="server" Height="41px" Text="Agregar" 
             Enabled="False" Width="120px" />
         <asp:Button ID="btnProbarLink" runat="server" Text="Probar Link" 
-            Height="41px" Width="119px" />
+            Height="41px" Width="119px" /></center>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblRespuestaLink" runat="server" ForeColor="Red"></asp:Label>   
+        <br />
+        <center><asp:Label ID="lblRespuestaLink" runat="server" ForeColor="Red"></asp:Label> </center>  
         </div>
     </form>
 </body>

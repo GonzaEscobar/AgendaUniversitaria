@@ -54,8 +54,7 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView> 
-     <asp:Label 
-                ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
+     <center><asp:Label ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label></center>
     </div>
     </form>
 </body>

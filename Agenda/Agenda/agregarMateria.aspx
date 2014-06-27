@@ -30,9 +30,7 @@
             style="margin-left: 0px; color: #003399; font-family: Arial;">
         </asp:CheckBoxList>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Button 
-            ID="btnAgregar" runat="server" Text="Agregar" Width="149px" />
-        &nbsp;
+        <center><asp:Button ID="btnAgregar" runat="server" Text="Agregar" Width="149px" /></center>
         <br />
     </div>
     </form>

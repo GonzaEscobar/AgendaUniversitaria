@@ -78,22 +78,19 @@ Public Class Documentos
 
         Dim id As Integer
         Dim documentos As New List(Of Documento)
+        Dim sUrl As String
+        Dim sScript As String = "<script language =javascript> "
         documentos = wsAgenda.obtenerDocumentos(materiaSeleccionada)
         id = grdDocumentos.Rows(grdDocumentos.SelectedIndex).Cells(1).Text
         For Each documento As Documento In documentos
             If documento.Codigo = id Then
-                Try
-                    Dim proceso As New System.Diagnostics.Process
-                    With proceso
-                        .StartInfo.FileName = documento.Link
-                        .Start()
-                        lblRespuesta.Text = ""
-                    End With
-                    wsAgenda.actualizarDescargas(documento.Codigo, documento.Descargas + 1)
-                    grdDocumentos.Rows(grdDocumentos.SelectedIndex).Cells(3).Text = documento.Descargas + 1
-                Catch ex As Exception
-                    lblRespuesta.Text = "Documento inaccesible"
-                End Try
+                sUrl = documento.Link
+                lblRespuesta.Text = ""
+                wsAgenda.actualizarDescargas(documento.Codigo, documento.Descargas + 1)
+                grdDocumentos.Rows(grdDocumentos.SelectedIndex).Cells(3).Text = documento.Descargas + 1
+                sScript += "window.open('" & sUrl & "',null,'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=300,left=100,top=100');"
+                sScript += "</script> "
+                Response.Write(sScript)
             End If
         Next
         grdDocumentos.SelectedIndex = -1

@@ -45,11 +45,10 @@
         </asp:DropDownList>
         <br />
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnMostrar" runat="server" Text="Mostrar" />
+        <center><asp:Button ID="btnMostrar" runat="server" Text="Mostrar" /></center>
         <br />
         <br />
-        <asp:GridView ID="grdEventos" runat="server" style="margin-left: 9px" 
+        <center><asp:GridView ID="grdEventos" runat="server" style="margin-left: 9px" 
             CellPadding="4" ForeColor="#333333" GridLines="None" 
             CaptionAlign="Right">
             <AlternatingRowStyle BackColor="White" />
@@ -63,9 +62,8 @@
             <SortedAscendingHeaderStyle BackColor="#6D95E1" />
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
-        </asp:GridView>
-        <span class="style1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label 
-                ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
+        </asp:GridView></center>
+        <span class="style1"><center> <asp:Label ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label></center>
             </div>
     </form>
 </body>

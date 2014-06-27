@@ -37,11 +37,10 @@
             style="text-align: left; margin-left: 0px; font-family: Arial; color: #003399; background-color: #F0F0F0;">
         </asp:CheckBoxList>
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-        <asp:Button ID="btnQuitar" runat="server" Text="Quitar" />
+<center><asp:Button ID="btnQuitar" runat="server" Text="Quitar" /></center>
         <br />
         <br />
-        <asp:Label ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label>
+       <center><asp:Label ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label></center> 
     </div>
     </form>
 </body>
