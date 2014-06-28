@@ -22,12 +22,12 @@
     End Property
 
 
-    Private mFecha As String
-    Public Property Fecha() As String
+    Private mFecha As DateTime
+    Public Property Fecha() As DateTime
         Get
             Return mFecha
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As DateTime)
             mFecha = value
         End Set
     End Property

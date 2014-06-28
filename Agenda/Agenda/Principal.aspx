@@ -13,7 +13,7 @@
         }
     </style> 
 </head>
-<body background=  "logo.jpg" style="height: 284px">
+<body background=  "fondoAzul2.jpg" style="height: 284px">
     <form id="form1" runat="server">
     <div style="height: 404px">
         <asp:LinkButton ID="Salr" runat="server" ><h5></h5><img class="botonSalir" src="botonExit.png" width="50px" style="float: right"/></asp:LinkButton>
