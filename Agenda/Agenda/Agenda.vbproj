@@ -14,6 +14,7 @@
     <AssemblyName>Agenda</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -104,6 +105,10 @@
     <Content Include="Login.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="quitarMateria.aspx" />
+    <Content Include="Styles\login_style.css" />
+    <Content Include="Styles\pagina_style.css" />
+    <Content Include="Styles\principal_style.css" />
+    <Content Include="Styles\registro_style.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
