@@ -7,8 +7,34 @@ div.caja{
 		margin: 50px auto;
 		padding: 1.5em;
 		border-radius: 15px;
+		float: right;
+}
+
+div.cajaDeTexto{
+
+		background:#f0f0f0;
+		width:400px;
+		height:300px;
+		border:1px solid white;
+		margin: 50px auto;
+		padding: 1.5em;
+		border-radius: 15px;
+		float:left;
+}
+
+div.cajaDescargas{
+
+	background:#f0f0f0;
+		width:200px;
+		border:1px solid white;
+		margin: 50px auto;
+		padding: 1.5em;
+		border-radius: 15px;
+		float: left;
+		height:200px;
 		
 }
+
 
 
 h1{
@@ -19,16 +45,18 @@ h1{
 
 h2{
 	font-family: arial;
-	color:#0080ff;
-	font-size: 30px;
+	color:#003399;
+	font-size: 24px;
 }
 
 h3
 {
     font-family: "Comic Sans MS";
-    color: White;
-    font-size: 25px;
-    }
+    color: #0080ff;
+    font-size: 16px;
+    height: 21px;
+    margin-bottom: 6px;
+}
 
 input[type=text], input[type=password]{
 	margin:0 0 1em 0;
