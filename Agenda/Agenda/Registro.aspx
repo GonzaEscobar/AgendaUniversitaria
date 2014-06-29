@@ -9,7 +9,7 @@
 </head>
 
 
-<body background=  "logo.jpg" style="height: 305px">
+<body background=  "fondoAzul2.jpg" style="height: 305px">
     <form id="form1" runat="server">
     <div class="caja" style="height: 549px">
         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">REGISTRO</span></h2>

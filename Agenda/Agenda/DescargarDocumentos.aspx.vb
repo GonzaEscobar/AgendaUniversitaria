@@ -59,21 +59,6 @@ Public Class Documentos
 
     End Sub
 
-
-    Protected Sub Menu1_MenuItemClick(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu1.MenuItemClick
-
-        If Menu1.SelectedItem.Text = "Salir" Then
-            If (Not Request.Cookies("UserSettings") Is Nothing) Then
-                Dim myCookie As HttpCookie
-                myCookie = New HttpCookie("UserSettings")
-                myCookie.Expires = DateTime.Now.AddDays(-1D)
-                Response.Cookies.Add(myCookie)
-                Response.Redirect("Login.aspx")
-            End If
-        End If
-
-    End Sub
-
     Protected Sub grdDocumentos_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles grdDocumentos.SelectedIndexChanged
 
         Dim id As Integer
@@ -107,6 +92,18 @@ Public Class Documentos
             For Each materia As Materia In materiasInscriptas
                 materias.Items.Add(materia.Nombre)
             Next
+        End If
+
+    End Sub
+
+    Protected Sub Salr_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Salr.Click
+
+        If (Not Request.Cookies("UserSettings") Is Nothing) Then
+            Dim myCookie As HttpCookie
+            myCookie = New HttpCookie("UserSettings")
+            myCookie.Expires = DateTime.Now.AddDays(-1D)
+            Response.Cookies.Add(myCookie)
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub

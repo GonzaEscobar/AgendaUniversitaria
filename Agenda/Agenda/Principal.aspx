@@ -8,7 +8,7 @@
 </head>
 
 
-<body background=  "fondoAzul.jpg" style="height: 284px">
+<body background=  "fondoAzul2.jpg" style="height: 284px">
     <form id="form1" runat="server">
         <div class="encabezado">
             <img src="logo.png" width="90px" style="float: left"/>

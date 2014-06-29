@@ -30,16 +30,25 @@
 </head>
 <body background=  "fondo.jpg">
     <form id="form1" runat="server">       
-    <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
-        Orientation="Horizontal" RenderingMode="Table" align="center">
+    <div class="encabezado">
+     <asp:LinkButton ID="Salr" runat="server" ><img class="botonSalir" src="botonExit.png" width="65px" style="float: right"/></asp:LinkButton>
+     <a href="Principal.aspx" ><img src="logo.png" style="float: left; width: 90px;"/>
+    <div style="color: #FFFFFF">
+     <a href="Principal.aspx" >
+     <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
+        Orientation="Horizontal" RenderingMode="Table"  Height="72px" 
+            style="margin-left: 0px" Width="145px">
         <Items>
             <asp:MenuItem NavigateUrl="~/DescargarDocumentos.aspx" 
                 Text="Descargar Documento" Value="Descargar Documento"></asp:MenuItem>
-            <asp:MenuItem NavigateUrl="~/Principal.aspx" Text="Principal" Value="Principal">
-            </asp:MenuItem>
-            <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
         </Items>
     </asp:Menu>
+        </a>  
+            <br />
+    </div>
+        <br />
+        </a>
+        <br />
     <br />
     <div class="caja">
       <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>

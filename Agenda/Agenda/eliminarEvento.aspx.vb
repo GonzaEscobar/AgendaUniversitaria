@@ -54,16 +54,14 @@ Public Class eliminarEvento
 
     End Sub
 
-    Protected Sub Menu1_MenuItemClick(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.MenuEventArgs) Handles Menu1.MenuItemClick
+    Protected Sub Salr_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Salr.Click
 
-        If Menu1.SelectedItem.Text = "Salir" Then
-            If (Not Request.Cookies("UserSettings") Is Nothing) Then
-                Dim myCookie As HttpCookie
-                myCookie = New HttpCookie("UserSettings")
-                myCookie.Expires = DateTime.Now.AddDays(-1D)
-                Response.Cookies.Add(myCookie)
-                Response.Redirect("Login.aspx")
-            End If
+        If (Not Request.Cookies("UserSettings") Is Nothing) Then
+            Dim myCookie As HttpCookie
+            myCookie = New HttpCookie("UserSettings")
+            myCookie.Expires = DateTime.Now.AddDays(-1D)
+            Response.Cookies.Add(myCookie)
+            Response.Redirect("Login.aspx")
         End If
 
     End Sub
