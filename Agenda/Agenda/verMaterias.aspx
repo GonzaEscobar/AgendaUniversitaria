@@ -3,26 +3,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
 <title></title>
      <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
-    <style type="text/css">
+      <style type="text/css">
         .style2
         {
-            color: #FFFFFF;
+            font-family: "Comic Sans MS";
+            font-size: 16px;
         }
-        div.caja{
-		background:#f0f0f0;
-		width:308px;
-		border:1px solid white;
-		margin: 22px auto 50px auto;
-		padding: 1.5em;
-		border-radius: 10px;	
-}
-    </style>    
+        </style>
 </head>
 <body background=  "fondo.jpg">
     <form id="form1" runat="server">
-    <<div class="encabezado">
+    <div class="encabezado">
      <asp:LinkButton ID="Salr" runat="server" ><img class="botonSalir" src="botonExit.png" width="65px" style="float: right"/></asp:LinkButton>
      <a href="Principal.aspx" ><img src="logo.png" style="float: left; width: 90px;"/>
     <div style="color: #FFFFFF">
