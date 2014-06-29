@@ -16,10 +16,16 @@
             font-family: "Comic Sans MS";
             font-size: 16px;
         }
+        .style3
+        {
+            text-decoration: none;
+        }
         </style>
 </head>
 <body background=  "fondo2.jpg">
     <form id="form1" runat="server">
+    <div class="encabezado">
+      <a href="Principal.aspx" ><img src="logo.png" width="90px" style="float: left"/>
     <div style="color: #FFFFFF">
       <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
         Orientation="Horizontal" RenderingMode="Table" align="center">
@@ -33,6 +39,11 @@
             <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
         </Items>
     </asp:Menu>
+    </div>
+        <br />
+        </a>
+        <br />
+      <a href="Principal.aspx" class="style3" >
     <br />
     <div class= "caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>

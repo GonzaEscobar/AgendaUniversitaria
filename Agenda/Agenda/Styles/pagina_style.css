@@ -10,11 +10,31 @@ div.caja{
 		
 }
 
+div.encabezado{
+     margin-top:20px;
+     background-color: #3b5998;
+     margin-bottom: 100px;
+     height: 65px;
+     background: rgba(59, 89, 152, 0.7);
+     
+}
+
+
+div.pieDePagina{
+     margin-top:500px;
+     background-color: #3b5998;
+     margin-bottom: 10px;
+     height: 75px;
+     background: rgba(59, 89, 152, 0.7);
+     float:center;
+     
+    }
+
 
 h1{
-	font-family: arial;
-	color:#0080ff;
-	font-size: 30px;
+font-family: arial;
+font-size:20px;
+color:white;
 }
 
 h2{

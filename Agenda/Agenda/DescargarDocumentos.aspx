@@ -4,7 +4,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
      <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
     <style type="text/css">
         .style2
@@ -33,6 +32,8 @@
 </head>
 <body background=  "fondo.jpg">
     <form id="form1" runat="server">
+    <div class="encabezado">
+        <a href="Principal.aspx" ><img src="logo.png" width="90px" style="float: left"/></a>
     <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
         Orientation="Horizontal" RenderingMode="Table" align="center">
         <Items>
@@ -43,6 +44,7 @@
             <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
         </Items>
     </asp:Menu>
+    </div>
     <div class="caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <div class="style2">
@@ -77,6 +79,9 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>   
     </div>
+
     </form>
+
+    
 </body>
 </html>

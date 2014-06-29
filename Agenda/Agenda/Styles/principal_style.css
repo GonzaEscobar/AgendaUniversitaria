@@ -1,72 +1,83 @@
 *{
 	margin:0px;
 	padding:0px;
-	font-family: verdana;
 }
 
 header{
-	margin:90px auto;
-	width:1200px;
-	height:230px;
-	
+	float: center;
+	 margin-left:350px; 
+	 margin-top:0px;
 }
 
-img.logo{
-	display:block;
-	margin: 50px auto;
-	padding: 10px;
-	background-color: rgba(255,255,255,0.15);
-	border-radius:50%;
-	width:600px auto;
+div.encabezado{
+     margin-top:20px;
+     background-color: #3b5998;
+     margin-bottom: 100px;
+     height: 65px;
+     background: rgba(59, 89, 152, 0.7);
+     
 }
+
+    div.pieDePagina{
+     margin-top:500px;
+     background-color: #3b5998;
+     margin-bottom: 10px;
+     height: 75px;
+     background: rgba(59, 89, 152, 0.7);
+     float:center;
+     
+    }
 
 img.botonSalir{
 	display:block;
 	padding: 10px;
-	background-color: rgba(255,255,255,0.15);
+	background-color: rgba(255,255,255);
 	border-radius:50%;
-	margin:0%;
+	margin:0px;
 }
 
-h5{
-font-family: arial black;
-text-align: right;
+h1{
+font-family: arial;
 font-size:20px;
 color:white;
-text-decoration:none;
 }
 
-h6{
-font-family: verdana;
-font-size:55px;
-color:rgb(128,0,255);
-text-align: left;
+h2
+{
+    margin:0px;
+    font-family: arial;
+    font-size:30px;
+    color:white;
+    text-align:center;
 }
+
+
 
 div.contenedor{
-	width:150px;
-	height:180px;
-	float: left;
-	-webkit-transition: height 0.2s;
-	-webkit-border-radius: 10%;
+	width:200px;
+	height:250px;
+	float:left;
+	transition: height 0.1s;
+	border-radius: 10%;	
 }
 
 div#btnDocumentos{
-	background-color:rgb(119,173,196);
-}
-div#btnEventos{
-	background-color: rgb(99,155,179);
+	background-color:rgb(208,101,3); 
 }
 div#btnMaterias{
-	background-color: rgb(22,145,190);
+	background-color:rgb(233,147,26);
 }
+div#btnEventos{
+	background-color: rgb(22,145,190); 
+}
+
 
 
 img.icon{
 	display: block;
-	margin: 40px auto;
+	margin: 50px auto;
 	background-color: rgba(255,255,255,0.15);
-	width: 40px;
+	width: 65px;
 	padding: 20px;
 	-webkit-border-radius: 50%;
 	-webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
@@ -74,25 +85,27 @@ img.icon{
 }
 
 p.texto{
-	margin-top: -10px;
-	font-size: .9em;
+	margin-top: 0px;
+	font-size: 1.3em;
 	color: white;
 	text-align: center;
-	padding-top: 0.2px;
+	padding-top: 1.3px;
 	opacity: .6;
-	-webkit-transition: padding-top 0.2s;
+	-webkit-transition: padding-top 0.1s;
 	font-family: arial;
 }
 
-div.contenedor:hover{
-	height:200px;
-}
+
 
 div.contenedor:hover p.texto{
-	padding-top: 20px;
+	padding-top: 30px;
 	opacity: 1;
 }
 
 div.contenedor:hover img.icon{
 	-webkit-box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.6);
+}
+
+div.contenedor:hover{
+	height:280px;
 }

@@ -20,8 +20,10 @@
 }
     </style>    
 </head>
-<body background=  "fondo1.jpg">
+<body background=  "fondo.jpg">
     <form id="form1" runat="server">
+    <div class="encabezado">
+    <a href="Principal.aspx" ><img src="logo.png" width="90px" style="float: left"/></a>
     <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
         Orientation="Horizontal" RenderingMode="Table" align="center">
         <Items>
@@ -34,6 +36,7 @@
             <asp:MenuItem Text="Salir" Value="Salir"></asp:MenuItem>
         </Items>
     </asp:Menu>
+    </div>
     <div class="caja">
         <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <div class="style2">
@@ -56,6 +59,10 @@
         </asp:GridView> 
      <center><asp:Label ID="lblRespuesta" runat="server" ForeColor="Red"></asp:Label></center>
     </div>
+    </div>
     </form>
+
+    
+
 </body>
 </html>
