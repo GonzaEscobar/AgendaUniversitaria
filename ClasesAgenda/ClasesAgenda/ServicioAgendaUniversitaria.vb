@@ -313,6 +313,41 @@
         End Try
     End Function
 
+    Public Function documantosMasDescargados() As List(Of Documento)
+        Dim dt As DataTable
+        Dim mSQL As String
+        Dim documentos As New List(Of Documento)
+        Dim mDocumento As Documento
+        Dim mMateria As Materia
+        Try
+            mSQL = "SELECT m.descripmateria, d.descripdocumento  FROM  materias m, documentos d " & _
+                    "WHERE  m.idmateria = d.idmateria"
+
+            dt = ServiciosSQL.seleccionarDatos(mSQL)
+
+            If Not IsNothing(dt) Then
+
+                For index As Integer = 0 To 4
+                    mMateria = New Materia
+                    mMateria.Nombre = dt(index)("descripmateria").ToString.Trim
+                    mDocumento = New Documento
+                    mDocumento.Materia = mMateria
+                    mDocumento.Nombre = dt(index)("descripdocumento")
+                    documentos.Add(mDocumento)
+                Next
+
+                Return documentos
+            Else
+                Return Nothing
+            End If
+
+        Catch ex As Exception
+
+            Return Nothing
+
+        End Try
+    End Function
+
 
     Public Function obtenerIdUsuario(ByVal pUsuario As String) As Integer
         Dim dt As DataTable

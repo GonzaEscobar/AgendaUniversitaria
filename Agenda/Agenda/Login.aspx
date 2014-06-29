@@ -8,9 +8,17 @@
 </head>
 
 <body background=  "fondoAzul2.jpg">
-  
+  <form id="form1" runat="server">
+  <div class="encabezado">
+            <img src="logo.png" width="90px" style="float: left"/>
+            <h1>
+            <br />
+            Bienvenido a Agenda Universitaria
+            </h1>
+               
+        </div>
     <div class="caja">
-        <form id="form1" runat="server">
+        
         <img class= "logo" src= "logo.png" style="width: 96px; height: 79px">
 		<h1>Login</h1>
         <br />
@@ -26,7 +34,7 @@
         <a href="Registro.aspx" >Registro</a>
         <br />    
 	
-    </form>
+    
     </div>
     <div class="cajaDeTexto"><h2>¿Qu&eacute es agenda universitaria?</h2> 
 <h3>Es un lugar en donde agendar tus eventos de la facultad;
@@ -36,15 +44,41 @@
  con calificacion de los usuarios, guias y todo lo que necesitas
  subido por tus propios compañeros. Aca te dejamos algo de material,
  registrate para poder agendar tus eventos y descargar todo el material que necesites.
- </h3>
+ <br />
+  <br />
+<asp:Label ID="lblMensaje" ForeColor="Red" Font-Names="Arial Black" runat="server"></asp:Label>
+  <br />
+   <br />
+ <asp:Button ID="btnRegistro" runat="server" Text="Registrarse"/>
+ &nbsp;</h3>
+ 
  </div>
 
  <div class= "cajaDescargas">
    <center>
             <h2>Lo mas descargado</h2>
+            <p>
+                <asp:GridView ID="grdDocumentos" runat="server" CellPadding="4" 
+            ForeColor="#333333" GridLines="None" style="margin-left: 0px" 
+            Width="494px" HorizontalAlign="Center">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:CommandField SelectText="Descargar" ShowSelectButton="True" />
+            </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+        </asp:GridView>   
+            </p>
    </center>
  </div>
- 
-    
+    </form>
 </body>
 </html>

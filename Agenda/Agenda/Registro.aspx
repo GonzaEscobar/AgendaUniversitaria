@@ -11,6 +11,14 @@
 
 <body background=  "fondoAzul2.jpg" style="height: 305px">
     <form id="form1" runat="server">
+    <div class="encabezado">
+            <img src="logo.png" width="90px" style="float: left"/>
+            <h1>
+            <br />
+            Bienvenido a Agenda Universitaria
+            </h1>
+               
+        </div>
     <div class="caja" style="height: 549px">
         <h2 style="text-align: center"><span style="font-family: Aharoni; color: #003399">REGISTRO</span></h2>
         <h3 style="width: 204px">Usuario <asp:Label ID="lblUsuario" Font-Size= "XX-Small" runat="server" ForeColor="Red"></asp:Label>
