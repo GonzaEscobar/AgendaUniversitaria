@@ -64,6 +64,7 @@
         <center><asp:GridView ID="grdEventos" runat="server" style="margin-left: 9px" 
             CellPadding="4" ForeColor="#333333" GridLines="None" 
             CaptionAlign="Right">
+            <RowStyle HorizontalAlign="center"  />
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

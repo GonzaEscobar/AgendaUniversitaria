@@ -46,6 +46,7 @@
         <asp:GridView ID="grdMaterias" runat="server" CellPadding="4" 
             ForeColor="#333333" GridLines="None" style="margin-left: 6px" 
                 HorizontalAlign="Center" Width="280px" CssClass="caja">
+            <RowStyle HorizontalAlign="center" />
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

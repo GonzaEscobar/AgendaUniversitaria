@@ -62,6 +62,7 @@
             ForeColor="#333333" GridLines="None" style="margin-left: 0px" 
             Width="494px" HorizontalAlign="Center">
             <AlternatingRowStyle BackColor="White" />
+            <RowStyle HorizontalAlign="center" />
             <Columns>
                 <asp:CommandField SelectText="Descargar" ShowSelectButton="True" />
             </Columns>
