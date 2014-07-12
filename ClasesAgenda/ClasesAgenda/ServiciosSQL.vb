@@ -1,8 +1,8 @@
 ﻿Imports Encriptador
 
 Public Class ServiciosSQL
-
-    Private Const mStringConexion As String = "driver={SQL Server};server=keyfactor.no-ip.org;uid=sa;PWD=matanga;database=AgendaUniversitaria;Provider=SQLOLEDB"
+     Private Const mStringConexion As String = "workstation id=DbAgenda.mssql.somee.com;packet size=4096;user id=morgan2990_SQLLogin_1;pwd=gsk9i4sxph;data source=DbAgenda.mssql.somee.com;persist security info=False;initial catalog=DbAgenda"
+    'Private Const mStringConexion As String = "driver={SQL Server};server=keyfactor.no-ip.org;uid=sa;PWD=matanga;database=AgendaUniversitaria;Provider=SQLOLEDB"
     'Private Const mStringConexion As String = "driver={SQL Server};server=EugePC;Trusted_Connection=Yes;database=AgendaUniversitaria;Provider=SQLOLEDB"
 
     Private Sub New()
