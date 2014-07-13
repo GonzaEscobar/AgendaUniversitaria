@@ -1,48 +1,78 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="agregarEvento.aspx.vb" Inherits="Agenda.agregarEvento" %>
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="agregarEvento.aspx.vb" Inherits="Agenda.agregarEvento" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title></title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Agenda Universitaria</title>
+ 
+    <!-- CSS de Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <link rel="StyleSheet" href="Styles/pagina_style.css" type="text/css">
-    <style type="text/css">
-        .style1
-        {
-            color: #000099;
-        }
-        .style2
-        {
-            font-family: "Comic Sans MS";
-            font-size: 16px;
-        }
-        </style>
+    
 </head>
-<body background=  "fondo2.jpg">
+<body background=  "fondoEventos.jpg">
    <form id="form1" runat="server">
-    <div class="encabezado">
-     <asp:LinkButton ID="Salr" runat="server" ><img class="botonSalir" src="botonExit.png" width="65px" style="float: right"/></asp:LinkButton>
-     <a href="Principal.aspx" ><img src="logo.png" style="float: left; width: 90px;"/>
-    <div style="color: #FFFFFF">
-     <a href="Principal.aspx" >
-     <asp:Menu ID="Menu1" runat="server" BackColor="#F0F0F0" ForeColor="#00CCFF" 
-        Orientation="Horizontal" RenderingMode="Table"  Height="72px" 
-            style="margin-left: 0px" Width="194px">
-        <Items>
-            <asp:MenuItem NavigateUrl="~/verEventos.aspx" 
-                Text="Ver Eventos" Value="Descargar Documento"></asp:MenuItem>
-            <asp:MenuItem NavigateUrl="~/eliminarEvento.aspx" Text="Eliminar Evento" 
-                Value="Eliminar Evento"></asp:MenuItem>
-        </Items>
-    </asp:Menu>
-        </a>  
-            <br />
+       <div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="Principal.aspx">Agenda Universitaria</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="Principal.aspx">Inicio</a></li>        
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentos <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="DescargarDocumentos.aspx">Descargar Documentos</a></li>
+                <li><a href="AgregarDocumento.aspx">Agregar Documentos</a></li>
+              </ul>
+            </li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Materias <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="verMaterias.aspx">Ver Materias</a></li>
+                <li><a href="agregarMateria.aspx">Agregar Materias</a></li>
+                  <li><a href="quitarMateria.aspx">Quitar Materias</a></li>
+              </ul>
+            </li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventos <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="verEventos.aspx">Ver Eventos</a></li>
+                  <li><a href="agregarEvento.aspx">Agregar Evento</a></li>
+                <li><a href="eliminarEvento.aspx">Eliminar Evento</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#contact">Contacto</a></li>
+              <li><asp:LinkButton ID="Salr" runat="server" css>Logout</asp:LinkButton></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-        <br />
-        </a>
-        <br />
-    <br />
- <div class="caja">
+       
+       <div class="container">
+           <div class="row">
+               <div class="col-md-3">
+               </div>
+               
+ <div class="cajaDescargas col-md-6">
       <asp:Label ID="lblLogueado" runat="server" ForeColor="White" style="color: #00CCFF"></asp:Label>
         <span
             class="style1">
@@ -63,7 +93,7 @@
         <center><asp:Label ID="lblEvento" runat="server" ForeColor="#FF5050" CssClass="style1"></asp:Label>
         <br class="style1" /></center>
         <br />
-       <span class="style2"><strong style="color: #0080FF">Evento&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;
+       <center><span class="style2"><strong style="color: #0080FF">Fecha&nbsp;</strong></span>&nbsp;&nbsp;&nbsp;
         <asp:Calendar ID="calFecha" runat="server" BackColor="White" 
             BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" 
             ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="300px" 
@@ -76,7 +106,7 @@
             <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" 
                 Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
             <TodayDayStyle BackColor="#CCCCCC" />
-        </asp:Calendar>
+        </asp:Calendar></center>
         <br />
         <center> <asp:Label ID="lblFecha" runat="server" ForeColor="#FF6666"></asp:Label></center>
         <br />
@@ -84,6 +114,17 @@
         <br />
         <center><asp:Button ID="btnAgregar" runat="server" Text="Agregar" /></center>
     </div>
+            <div class="col-md-3">
+               </div>     
+           </div>
+       </div>
     </form>
+               
+               <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -78,6 +78,16 @@ input[type=submit]:hover, form a:hover
 }
 
 
+div.cajaDescargas{
+        margin-top: 55px;
+		background:#f0f0f0;
+		
+		border:1px solid white;
+		padding: 1.5em;
+		border-radius: 10px;
+		
+}
+
 
 
 

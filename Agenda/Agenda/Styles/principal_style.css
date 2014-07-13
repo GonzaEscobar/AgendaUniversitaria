@@ -4,15 +4,14 @@
 }
 
 header{
-	float: center;
 	 margin-left:350px; 
 	 margin-top:0px;
 }
 
 div.encabezado{
-     margin-top:20px;
+     margin-top:50px;
      background-color: #3b5998;
-     margin-bottom: 100px;
+
      height: 65px;
      background: rgba(59, 89, 152, 0.7);
      
@@ -24,16 +23,13 @@ div.encabezado{
      margin-bottom: 10px;
      height: 75px;
      background: rgba(59, 89, 152, 0.7);
-     float:center;
      
     }
 
 img.botonSalir{
-	display:block;
 	padding: 10px;
 	background-color: rgba(255,255,255);
 	border-radius:50%;
-	margin:0px;
 }
 
 h1{
@@ -63,12 +59,15 @@ div.contenedor{
 
 div#btnDocumentos{
 	background-color:rgb(208,101,3); 
+    
 }
 div#btnMaterias{
 	background-color:rgb(233,147,26);
+    
 }
 div#btnEventos{
 	background-color: rgb(22,145,190); 
+    
 }
 
 
@@ -109,3 +108,4 @@ div.contenedor:hover img.icon{
 div.contenedor:hover{
 	height:280px;
 }
+
